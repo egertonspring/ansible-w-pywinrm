@@ -3,6 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update
 RUN apt -y upgrade
 RUN apt -y install python3-pip gcc vim libkrb5-dev krb5-user
+RUN apt -y sshpass
 RUN pip3 --no-cache-dir install "ansible>=2.10"
 RUN pip3 --no-cache-dir install ntlm-auth
 RUN pip3 --no-cache-dir install cryptography
